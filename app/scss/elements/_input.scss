@@ -1,0 +1,16 @@
+input {
+    &::placeholder {
+        color: inherit;
+    }
+
+    @include font(medium);
+
+    width: 100%;
+    padding: space(base) - 2;
+
+    font-size: font-size(medium);
+    color: color(light, darken);
+
+    background-color: color(light);
+    border-radius: 5px;
+}

@@ -1,0 +1,19 @@
+a,
+[type="submit"],
+button{
+	&.btn {
+		@include font(bold);
+
+		&-primary {
+			background-color: color(primary);
+			border: none;
+
+			&:not(:disabled):not(.disabled).active,
+			&:not(:disabled):not(.disabled):active,
+			&:active,
+			&:hover {
+				background-color: darken(color(primary), 10%);
+			}
+		}
+	}
+}

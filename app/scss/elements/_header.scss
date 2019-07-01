@@ -1,0 +1,26 @@
+header {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    padding: space(m) 0;
+
+    border-bottom: 1px solid color(light, darken);
+
+    h1 {
+        @include font(medium);
+        @include sprite($lgo-cadastra);
+        @include hidden-text();
+
+        position: relative;
+        overflow: inherit;
+
+        &:before {
+            position: absolute;
+            top: 18px;
+            right: -170px;
+            text-indent: 0;
+            content: "Performance First"
+        }
+    }
+}
