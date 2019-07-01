@@ -326,18 +326,23 @@ section.lead {
       background-position: 0px -43px;
       width: 35px;
       height: 46px; }
-  section.lead .form--content {
+  @media (min-width: 75em) {
+    section.lead .form--content {
+      position: relative;
+      left: 75px; } }
+  section.lead .form--content > div {
     position: relative;
     margin: 32px 0 0;
     padding: 32px 24px;
     background-color: #282828; }
     @media (min-width: 75em) {
-      section.lead .form--content {
-        position: absolute;
-        top: -45px;
+      section.lead .form--content > div {
+        position: fixed;
+        top: 62px;
+        z-index: 10;
         max-width: 300px;
-        margin: inherit; } }
-    section.lead .form--content:before {
+        margin: 0 -space(xg) 0 0; } }
+    section.lead .form--content > div:before {
       content: "";
       position: absolute;
       top: 0;
@@ -345,12 +350,12 @@ section.lead {
       width: 4px;
       height: 40px;
       background-color: #f68931; }
-    section.lead .form--content p {
+    section.lead .form--content > div p {
       margin-bottom: 16px; }
-    section.lead .form--content form {
+    section.lead .form--content > div form {
       display: none; }
       @media (min-width: 75em) {
-        section.lead .form--content form {
+        section.lead .form--content > div form {
           display: block; } }
 
 section.services .my-5 + .my-5 h4 {

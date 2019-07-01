@@ -129,44 +129,52 @@ section {
 
         .form--content {
             @include responsive(large) {
-                position: absolute;
-                top: -45px;
-
-                max-width: 300px;
-                margin: inherit;
+                position: relative;
+                left: 75px;
             }
-
-            position: relative;
-
-            margin: space(g) 0 0;
-            padding: space(g) space(m);
-
-            background-color: color(dark);
-
-            &:before {
-                content: "";
-
-                position: absolute;
-                top: 0;
-                left: 0;
-
-
-                width: 4px;
-                height: 40px;
-
-                background-color: color(primary);
-            }
-
-            p {
-                margin-bottom: space(base);
-            }
-
-            form {
+            > div {
                 @include responsive(large) {
-                    display: block;
+                    position: fixed;
+                    top: 62px;
+                    z-index: 10;
+
+
+                    max-width: 300px;
+                    margin: 0 -space(xg) 0 0;
                 }
 
-                display: none;
+                position: relative;
+
+                margin: space(g) 0 0;
+                padding: space(g) space(m);
+
+                background-color: color(dark);
+
+                &:before {
+                    content: "";
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+
+                    width: 4px;
+                    height: 40px;
+
+                    background-color: color(primary);
+                }
+
+                p {
+                    margin-bottom: space(base);
+                }
+
+                form {
+                    @include responsive(large) {
+                        display: block;
+                    }
+
+                    display: none;
+                }
             }
         }
     }
