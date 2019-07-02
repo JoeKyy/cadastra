@@ -6,9 +6,9 @@ input {
     @include font(medium);
 
     width: 100%;
-    padding: space(base) - 2;
+    padding: space(p) - 2;
 
-    font-size: font-size(medium);
+    font-size: font-size(normal);
     color: color(light, darken);
 
     background-color: color(light);

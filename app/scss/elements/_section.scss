@@ -132,10 +132,11 @@ section {
                 position: relative;
                 left: 75px;
             }
+
             > div {
                 @include responsive(large) {
-                    position: fixed;
-                    top: 62px;
+                    position: absolute;
+                    top: -78px;
                     z-index: 10;
 
 
@@ -164,8 +165,27 @@ section {
                     background-color: color(primary);
                 }
 
+                &.sticky {
+                    @include responsive(large) {
+                        left: auto;
+                    }
+
+                    position: fixed;
+                    top: -45px;
+                    left: 0;
+                    z-index: 10;
+
+                    width: 100%;
+                }
+
                 p {
                     margin-bottom: space(base);
+
+                    font-size: font-size(small);
+
+                    small {
+                        font-size: 80%;
+                    }
                 }
 
                 form {

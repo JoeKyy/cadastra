@@ -147,8 +147,8 @@ input {
   font-family: Montserrat;
   font-weight: 500;
   width: 100%;
-  padding: 14px;
-  font-size: 1rem;
+  padding: 6px;
+  font-size: 0.875rem;
   color: #acacac;
   background-color: #ffffff;
   border-radius: 5px; }
@@ -337,8 +337,8 @@ section.lead {
     background-color: #282828; }
     @media (min-width: 75em) {
       section.lead .form--content > div {
-        position: fixed;
-        top: 62px;
+        position: absolute;
+        top: -78px;
         z-index: 10;
         max-width: 300px;
         margin: 0 -space(xg) 0 0; } }
@@ -350,8 +350,20 @@ section.lead {
       width: 4px;
       height: 40px;
       background-color: #f68931; }
+    section.lead .form--content > div.sticky {
+      position: fixed;
+      top: -45px;
+      left: 0;
+      z-index: 10;
+      width: 100%; }
+      @media (min-width: 75em) {
+        section.lead .form--content > div.sticky {
+          left: auto; } }
     section.lead .form--content > div p {
-      margin-bottom: 16px; }
+      margin-bottom: 16px;
+      font-size: 0.75rem; }
+      section.lead .form--content > div p small {
+        font-size: 80%; }
     section.lead .form--content > div form {
       display: none; }
       @media (min-width: 75em) {
@@ -465,6 +477,8 @@ footer {
     overflow: inherit; }
   footer p {
     font-size: 0.75rem; }
+    footer p small {
+      font-size: 80%; }
   footer hr {
     border: 1px solid #ffffff !important; }
 
@@ -528,3 +542,9 @@ footer {
 
 label {
   white-space: nowrap; }
+
+.position-absolute {
+  position: relative !important; }
+  @media (min-width: 75em) {
+    .position-absolute {
+      position: absolute !important; } }

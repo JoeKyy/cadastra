@@ -69,3 +69,11 @@
 label {
     white-space: nowrap;
 }
+
+.position-absolute {
+    @include responsive(large) {
+        position: absolute!important;
+    }
+
+    position: relative!important;
+}
